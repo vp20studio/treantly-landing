@@ -1,7 +1,18 @@
-import Link from "next/link";
+"use client";
+
+import { useState } from "react";
 import CandidateCard from "./CandidateCard";
 
 export default function Hero() {
+  const [email, setEmail] = useState("");
+
+  const handleGetStarted = () => {
+    const calendlyUrl = email
+      ? `https://calendly.com/vp20studio-info/30min?email=${encodeURIComponent(email)}`
+      : "https://calendly.com/vp20studio-info/30min";
+    window.open(calendlyUrl, "_blank");
+  };
+
   return (
     <section className="min-h-screen pt-32 pb-20 px-6 lg:px-8 bg-[var(--brand-cream)]">
       <div className="max-w-7xl mx-auto">
@@ -27,19 +38,21 @@ export default function Hero() {
               <strong className="text-[var(--brand-green)]">48 hours</strong>.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="#book-call"
-                className="bg-[var(--brand-green)] text-[var(--brand-cream)] px-8 py-4 rounded-full font-semibold text-lg hover:bg-[var(--brand-teal)] transition-all duration-300 text-center border-2 border-white shadow-soft hover:shadow-lg hover:-translate-y-0.5"
+            {/* Email Input + Get Started */}
+            <div className="flex flex-col sm:flex-row gap-3 max-w-lg">
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your email"
+                className="flex-1 px-6 py-4 rounded-full border-2 border-[var(--brand-green)]/20 bg-white text-[var(--brand-green)] placeholder:text-[var(--muted)] focus:outline-none focus:border-[var(--brand-teal)] transition-colors"
+              />
+              <button
+                onClick={handleGetStarted}
+                className="bg-[var(--brand-green)] text-[var(--brand-cream)] px-8 py-4 rounded-full font-semibold text-lg hover:bg-[var(--brand-teal)] transition-all duration-300 text-center border-2 border-white shadow-soft hover:shadow-lg hover:-translate-y-0.5 whitespace-nowrap"
               >
-                Check Availability & Book Call
-              </Link>
-              <Link
-                href="#how-it-works"
-                className="bg-transparent text-[var(--brand-green)] px-8 py-4 rounded-full font-semibold text-lg hover:bg-[var(--brand-beige)] transition-all duration-300 text-center border-2 border-[var(--brand-green)]"
-              >
-                See How It Works
-              </Link>
+                Get Started
+              </button>
             </div>
 
             {/* Trust Indicators */}
