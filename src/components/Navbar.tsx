@@ -1,48 +1,66 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled
+          ? "glass shadow-elevated py-2"
+          : "bg-transparent py-4"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-[var(--brand-green)] rounded-full flex items-center justify-center">
-              <span className="text-[var(--brand-cream)] font-bold text-lg">T</span>
-            </div>
-            <span className="font-[family-name:var(--font-playfair)] text-2xl font-semibold text-[var(--brand-green)]">
-              Treantly
-            </span>
+          <Link href="/" className="flex items-center gap-3 group">
+            <Image
+              src="/logo.svg"
+              alt="Treantly"
+              width={180}
+              height={40}
+              className="h-10 w-auto transition-transform duration-300 group-hover:scale-105"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             <Link
               href="#how-it-works"
-              className="text-[var(--brand-green)] hover:text-[var(--brand-teal)] transition-colors font-medium"
+              className="relative text-[var(--brand-green)] font-medium transition-colors hover:text-[var(--brand-teal)] after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[var(--brand-teal)] after:transition-all hover:after:w-full"
             >
               How It Works
             </Link>
             <Link
               href="#pricing"
-              className="text-[var(--brand-green)] hover:text-[var(--brand-teal)] transition-colors font-medium"
+              className="relative text-[var(--brand-green)] font-medium transition-colors hover:text-[var(--brand-teal)] after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[var(--brand-teal)] after:transition-all hover:after:w-full"
             >
               Pricing
             </Link>
             <Link
               href="#faq"
-              className="text-[var(--brand-green)] hover:text-[var(--brand-teal)] transition-colors font-medium"
+              className="relative text-[var(--brand-green)] font-medium transition-colors hover:text-[var(--brand-teal)] after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[var(--brand-teal)] after:transition-all hover:after:w-full"
             >
               FAQ
             </Link>
             <Link
               href="#book-call"
-              className="bg-[var(--brand-green)] text-[var(--brand-cream)] px-6 py-3 rounded-full font-semibold hover:bg-[var(--brand-teal)] transition-colors border-2 border-white"
+              className="btn-primary text-[var(--brand-cream)] px-6 py-3 rounded-full font-semibold"
             >
               Book a Call
             </Link>
@@ -50,7 +68,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 rounded-xl hover:bg-[var(--brand-beige)] transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -80,40 +98,42 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden pb-6 border-t border-[var(--brand-green)]/10">
-            <div className="flex flex-col gap-4 pt-4">
-              <Link
-                href="#how-it-works"
-                className="text-[var(--brand-green)] hover:text-[var(--brand-teal)] transition-colors font-medium py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                How It Works
-              </Link>
-              <Link
-                href="#pricing"
-                className="text-[var(--brand-green)] hover:text-[var(--brand-teal)] transition-colors font-medium py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Pricing
-              </Link>
-              <Link
-                href="#faq"
-                className="text-[var(--brand-green)] hover:text-[var(--brand-teal)] transition-colors font-medium py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                FAQ
-              </Link>
-              <Link
-                href="#book-call"
-                className="bg-[var(--brand-green)] text-[var(--brand-cream)] px-6 py-3 rounded-full font-semibold hover:bg-[var(--brand-teal)] transition-colors text-center border-2 border-white"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Book a Call
-              </Link>
-            </div>
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-300 ${
+            isMenuOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <div className="flex flex-col gap-2 py-4 border-t border-[var(--brand-green)]/10">
+            <Link
+              href="#how-it-works"
+              className="text-[var(--brand-green)] hover:text-[var(--brand-teal)] transition-colors font-medium py-3 px-4 rounded-xl hover:bg-[var(--brand-beige)]"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              How It Works
+            </Link>
+            <Link
+              href="#pricing"
+              className="text-[var(--brand-green)] hover:text-[var(--brand-teal)] transition-colors font-medium py-3 px-4 rounded-xl hover:bg-[var(--brand-beige)]"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Pricing
+            </Link>
+            <Link
+              href="#faq"
+              className="text-[var(--brand-green)] hover:text-[var(--brand-teal)] transition-colors font-medium py-3 px-4 rounded-xl hover:bg-[var(--brand-beige)]"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              FAQ
+            </Link>
+            <Link
+              href="#book-call"
+              className="btn-primary text-[var(--brand-cream)] px-6 py-3 rounded-full font-semibold text-center mt-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Book a Call
+            </Link>
           </div>
-        )}
+        </div>
       </div>
     </nav>
   );

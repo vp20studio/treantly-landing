@@ -3,6 +3,7 @@
 :root {
   /* Treantly Brand Colors */
   --brand-green: #2E4934;
+  --brand-green-light: #3d5f45;
   --brand-cream: #FFFDF7;
   --brand-beige: #F6F3EC;
   --brand-lime: #E3F599;
@@ -13,10 +14,15 @@
   /* Semantic Colors */
   --background: #FFFDF7;
   --foreground: #2E4934;
-  --muted: #979797;
+  --muted: #6B7280;
   --success: #068466;
   --warning: #EBA442;
   --error: #DC2626;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #2E4934 0%, #068466 100%);
+  --gradient-lime: linear-gradient(135deg, #E3F599 0%, #d4e87a 100%);
+  --gradient-glow: radial-gradient(ellipse at center, rgba(6, 132, 102, 0.15) 0%, transparent 70%);
 }
 
 @theme inline {
@@ -49,33 +55,229 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-body), system-ui, sans-serif;
+  overflow-x: hidden;
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--brand-beige);
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
   background: var(--brand-green);
-  border-radius: 4px;
+  border-radius: 3px;
 }
 
-/* Glassmorphism utility */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-teal);
+}
+
+/* Premium Glassmorphism */
 .glass {
-  background: rgba(255, 253, 247, 0.8);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(46, 73, 52, 0.1);
+  background: rgba(255, 253, 247, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(46, 73, 52, 0.08);
 }
 
-/* Soft shadow utility */
+.glass-dark {
+  background: rgba(46, 73, 52, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* Shadow utilities */
 .shadow-soft {
-  box-shadow: 0 4px 24px rgba(46, 73, 52, 0.08);
+  box-shadow: 0 4px 24px rgba(46, 73, 52, 0.06);
+}
+
+.shadow-elevated {
+  box-shadow:
+    0 4px 6px -1px rgba(46, 73, 52, 0.05),
+    0 10px 30px -5px rgba(46, 73, 52, 0.1),
+    0 20px 50px -10px rgba(46, 73, 52, 0.08);
+}
+
+.shadow-glow {
+  box-shadow:
+    0 0 20px rgba(6, 132, 102, 0.15),
+    0 0 40px rgba(6, 132, 102, 0.1),
+    0 0 60px rgba(6, 132, 102, 0.05);
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 6s ease-in-out 2s infinite;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 3s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 4s ease infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.4s ease-out forwards;
+}
+
+/* Hover effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 10px 30px -5px rgba(46, 73, 52, 0.15),
+    0 20px 50px -10px rgba(46, 73, 52, 0.1);
+}
+
+.hover-glow {
+  transition: box-shadow 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow:
+    0 0 30px rgba(6, 132, 102, 0.2),
+    0 0 60px rgba(6, 132, 102, 0.1);
+}
+
+/* Button styles */
+.btn-primary {
+  background: var(--gradient-primary);
+  background-size: 200% 200%;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+.btn-primary:hover {
+  background-position: 100% 50%;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px -5px rgba(46, 73, 52, 0.3);
+}
+
+/* Text gradient */
+.text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Decorative elements */
+.blob {
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  filter: blur(40px);
+}
+
+.grain {
+  position: relative;
+}
+
+.grain::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
 }
 
 /* Calendly responsive styles */
@@ -87,4 +289,26 @@ body {
   .calendly-inline-widget {
     height: 800px !important;
   }
+}
+
+/* Selection */
+::selection {
+  background: var(--brand-lime);
+  color: var(--brand-green);
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--brand-teal);
+  outline-offset: 2px;
+}
+
+/* Smooth image loading */
+img {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+img[loading] {
+  opacity: 0;
 }

@@ -26,6 +26,10 @@ export const metadata: Metadata = {
     "business scaling",
     "operations support",
   ],
+  icons: {
+    icon: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
   openGraph: {
     title: "Hire Top 1% Virtual Assistants | Treantly",
     description:

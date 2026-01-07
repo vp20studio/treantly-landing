@@ -20,6 +20,7 @@ export default function HowItWorks() {
           />
         </svg>
       ),
+      gradient: "from-[var(--brand-teal)] to-[#0a9f7d]",
     },
     {
       number: "02",
@@ -41,6 +42,7 @@ export default function HowItWorks() {
           />
         </svg>
       ),
+      gradient: "from-[var(--brand-green)] to-[#3d5f45]",
     },
     {
       number: "03",
@@ -62,16 +64,26 @@ export default function HowItWorks() {
           />
         </svg>
       ),
+      gradient: "from-[var(--brand-orange)] to-[#f0b85a]",
     },
   ];
 
   return (
-    <section id="how-it-works" className="py-20 px-6 lg:px-8 bg-[var(--brand-cream)]">
-      <div className="max-w-6xl mx-auto">
+    <section id="how-it-works" className="relative py-24 px-6 lg:px-8 bg-[var(--brand-cream)] overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/2 left-0 w-72 h-72 bg-[var(--brand-lime)] rounded-full blur-[120px] opacity-30 -translate-y-1/2"></div>
+        <div className="absolute top-1/2 right-0 w-72 h-72 bg-[var(--brand-teal)] rounded-full blur-[120px] opacity-20 -translate-y-1/2"></div>
+      </div>
+
+      <div className="relative max-w-6xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-[var(--brand-lime)] px-4 py-2 rounded-full mb-6">
-            <span className="text-sm font-medium text-[var(--brand-green)]">
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[var(--brand-lime)] to-[#d4e87a] px-5 py-2.5 rounded-full shadow-soft mb-6">
+            <svg className="w-4 h-4 text-[var(--brand-green)]" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
+            </svg>
+            <span className="text-sm font-semibold text-[var(--brand-green)]">
               Simple 3-Step Process
             </span>
           </div>
@@ -87,44 +99,53 @@ export default function HowItWorks() {
         {/* Steps */}
         <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
           {steps.map((step, index) => (
-            <div key={step.number} className="relative">
-              {/* Connector Line (hidden on mobile and after last item) */}
+            <div key={step.number} className="relative group">
+              {/* Connector Line */}
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-16 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-[var(--brand-teal)] to-transparent"></div>
+                <div className="hidden md:block absolute top-20 left-[55%] w-[90%] h-1">
+                  <div className="h-full bg-gradient-to-r from-[var(--brand-lime)] via-[var(--brand-teal)]/30 to-transparent rounded-full"></div>
+                  <div className="absolute top-1/2 right-0 w-3 h-3 bg-[var(--brand-beige)] rounded-full -translate-y-1/2 border-2 border-[var(--brand-teal)]/30"></div>
+                </div>
               )}
 
-              <div className="glass rounded-3xl p-8 h-full shadow-soft hover:shadow-lg transition-shadow duration-300 relative">
+              <div className="glass rounded-3xl p-8 h-full shadow-elevated hover-lift relative overflow-hidden">
+                {/* Background gradient on hover */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${step.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
+
                 {/* Step Number */}
-                <div className="absolute -top-4 -left-4 w-12 h-12 bg-[var(--brand-teal)] rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                <div className={`absolute -top-4 -left-4 w-14 h-14 bg-gradient-to-br ${step.gradient} rounded-2xl flex items-center justify-center text-white font-bold text-lg shadow-lg transform group-hover:scale-110 transition-transform duration-300`}>
                   {step.number}
                 </div>
 
                 {/* Icon */}
-                <div className="w-16 h-16 bg-[var(--brand-lime)] rounded-2xl flex items-center justify-center text-[var(--brand-green)] mb-6 mt-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-[var(--brand-lime)] to-[#d4e87a] rounded-2xl flex items-center justify-center text-[var(--brand-green)] mb-6 mt-6 shadow-soft group-hover:shadow-lg transition-shadow duration-300">
                   {step.icon}
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold text-[var(--brand-green)] mb-3">
+                <h3 className="text-xl font-bold text-[var(--brand-green)] mb-3 group-hover:text-gradient transition-colors">
                   {step.title}
                 </h3>
                 <p className="text-[var(--muted)] leading-relaxed">
                   {step.description}
                 </p>
+
+                {/* Decorative corner */}
+                <div className="absolute bottom-0 right-0 w-20 h-20 bg-gradient-to-tl from-[var(--brand-beige)] to-transparent rounded-tl-3xl"></div>
               </div>
             </div>
           ))}
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-20">
           <a
             href="#book-call"
-            className="inline-flex items-center gap-2 bg-[var(--brand-green)] text-[var(--brand-cream)] px-8 py-4 rounded-full font-semibold text-lg hover:bg-[var(--brand-teal)] transition-all duration-300 border-2 border-white shadow-soft hover:shadow-lg"
+            className="group inline-flex items-center gap-3 btn-primary text-[var(--brand-cream)] px-10 py-5 rounded-2xl font-semibold text-lg"
           >
             Start Your Discovery Call
             <svg
-              className="w-5 h-5"
+              className="w-5 h-5 transition-transform group-hover:translate-x-1"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -137,6 +158,9 @@ export default function HowItWorks() {
               />
             </svg>
           </a>
+          <p className="mt-4 text-sm text-[var(--muted)]">
+            No commitment required. Just a friendly conversation.
+          </p>
         </div>
       </div>
     </section>
