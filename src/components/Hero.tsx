@@ -82,19 +82,19 @@ export default function Hero() {
             <div className="flex flex-wrap items-center gap-6 pt-4 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
               <div className="flex -space-x-3">
                 {[
-                  { bg: "bg-gradient-to-br from-[#068466] to-[#0a9f7d]", letter: "J" },
-                  { bg: "bg-gradient-to-br from-[#2E4934] to-[#3d5f45]", letter: "S" },
-                  { bg: "bg-gradient-to-br from-[#EBA442] to-[#f0b85a]", letter: "M" },
-                  { bg: "bg-gradient-to-br from-[#7DD3FC] to-[#60c5f5]", letter: "A" },
-                  { bg: "bg-gradient-to-br from-[#E3F599] to-[#d4e87a]", letter: "R" },
+                  { src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face", name: "James" },
+                  { src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face", name: "Sarah" },
+                  { src: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face", name: "Michael" },
+                  { src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face", name: "Amanda" },
+                  { src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face", name: "Robert" },
                 ].map((avatar, i) => (
-                  <div
+                  <img
                     key={i}
-                    className={`w-11 h-11 rounded-full ${avatar.bg} border-3 border-[var(--brand-cream)] flex items-center justify-center text-sm font-bold text-white shadow-lg transition-transform hover:scale-110 hover:z-10`}
+                    src={avatar.src}
+                    alt={avatar.name}
+                    className="w-11 h-11 rounded-full border-3 border-[var(--brand-cream)] object-cover shadow-lg transition-transform hover:scale-110 hover:z-10"
                     style={{ animationDelay: `${0.5 + i * 0.1}s` }}
-                  >
-                    {avatar.letter}
-                  </div>
+                  />
                 ))}
               </div>
               <div>
