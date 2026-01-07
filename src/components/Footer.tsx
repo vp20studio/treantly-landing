@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -17,12 +16,10 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="md:col-span-2">
             <Link href="/" className="inline-block mb-6 group">
-              <Image
+              <img
                 src="/logo-light.svg"
                 alt="Treantly"
-                width={200}
-                height={50}
-                className="h-12 w-auto transition-transform group-hover:scale-105"
+                className="h-10 w-auto transition-transform group-hover:scale-105"
               />
             </Link>
             <p className="text-[var(--brand-cream)]/70 max-w-sm mb-8 leading-relaxed">

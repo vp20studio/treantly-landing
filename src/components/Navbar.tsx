@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,13 +27,10 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <Image
+            <img
               src="/logo.svg"
               alt="Treantly"
-              width={180}
-              height={40}
               className="h-10 w-auto transition-transform duration-300 group-hover:scale-105"
-              priority
             />
           </Link>
 
