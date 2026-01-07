@@ -16,17 +16,14 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           {/* Brand Column */}
           <div className="md:col-span-2">
-            <Link href="/" className="flex items-center gap-3 mb-6 group">
+            <Link href="/" className="inline-block mb-6 group">
               <Image
-                src="/favicon.svg"
+                src="/logo-light.svg"
                 alt="Treantly"
-                width={48}
-                height={48}
-                className="w-12 h-12 bg-[var(--brand-cream)] rounded-xl p-2 transition-transform group-hover:scale-110"
+                width={200}
+                height={50}
+                className="h-12 w-auto transition-transform group-hover:scale-105"
               />
-              <span className="font-[family-name:var(--font-playfair)] text-2xl font-semibold">
-                Treantly
-              </span>
             </Link>
             <p className="text-[var(--brand-cream)]/70 max-w-sm mb-8 leading-relaxed">
               Connecting businesses with the top 1% of global virtual assistant
