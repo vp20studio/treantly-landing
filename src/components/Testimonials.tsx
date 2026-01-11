@@ -129,13 +129,13 @@ export default function Testimonials() {
               {/* Card */}
               <div className="relative bg-white rounded-2xl overflow-hidden shadow-[0_2px_20px_-4px_rgba(46,73,52,0.12)] hover:shadow-[0_8px_40px_-8px_rgba(46,73,52,0.2)] transition-all duration-500 hover:-translate-y-1">
                 {/* Video Container */}
-                <div className="relative aspect-[9/14] bg-[var(--brand-green)] overflow-hidden">
+                <div className="relative aspect-[9/14] bg-[var(--brand-green)]">
                   <video
                     ref={(el) => {
                       videoRefs.current[testimonial.id] = el;
                     }}
                     src={testimonial.videoUrl}
-                    className="w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full object-cover"
                     playsInline
                     onEnded={handleVideoEnd}
                     onClick={() => {
@@ -150,10 +150,10 @@ export default function Testimonials() {
                   />
 
                   {/* Top gradient for badge visibility */}
-                  <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-black/40 to-transparent pointer-events-none"></div>
+                  <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-black/40 to-transparent pointer-events-none z-10"></div>
 
                   {/* Bottom gradient */}
-                  <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/60 via-black/20 to-transparent pointer-events-none"></div>
+                  <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/60 via-black/20 to-transparent pointer-events-none z-10"></div>
 
                   {/* Play Button */}
                   {activeVideo !== testimonial.id && (
@@ -162,7 +162,7 @@ export default function Testimonials() {
                         handlePlayVideo(testimonial.id);
                         videoRefs.current[testimonial.id]?.play();
                       }}
-                      className="absolute inset-0 flex items-center justify-center group/play"
+                      className="absolute inset-0 flex items-center justify-center group/play z-20"
                     >
                       <div className="relative">
                         {/* Pulse ring */}
@@ -182,7 +182,7 @@ export default function Testimonials() {
                   )}
 
                   {/* Company badge at top */}
-                  <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
+                  <div className="absolute top-3 left-3 right-3 flex items-center justify-between z-30">
                     <div className="bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm">
                       <span className="text-[11px] sm:text-xs font-semibold text-[var(--brand-green)]">
                         {testimonial.company}
@@ -196,7 +196,7 @@ export default function Testimonials() {
                   </div>
 
                   {/* Name overlay at bottom */}
-                  <div className="absolute bottom-3 left-3 right-3">
+                  <div className="absolute bottom-3 left-3 right-3 z-30">
                     <p className="text-white font-semibold text-sm sm:text-base drop-shadow-lg">
                       {testimonial.name}
                     </p>
