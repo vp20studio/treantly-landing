@@ -17,9 +17,9 @@ export default function Footer() {
           <div className="md:col-span-2">
             <Link href="/" className="inline-block mb-6 group">
               <img
-                src="/logo-light.svg"
+                src="/logo-lime.png"
                 alt="Treantly"
-                className="h-10 w-auto transition-transform group-hover:scale-105"
+                className="h-8 sm:h-10 w-auto transition-transform group-hover:scale-105"
               />
             </Link>
             <p className="text-[var(--brand-cream)]/70 max-w-sm mb-8 leading-relaxed">
