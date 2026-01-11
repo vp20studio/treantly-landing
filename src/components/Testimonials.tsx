@@ -115,12 +115,12 @@ export default function Testimonials() {
           </p>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        {/* Testimonials - Horizontal scroll on mobile, grid on desktop */}
+        <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 -mx-6 px-6 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 sm:gap-6 sm:overflow-visible sm:pb-0">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="glass rounded-3xl overflow-hidden shadow-elevated hover-lift group"
+              className="flex-shrink-0 w-[280px] sm:w-auto glass rounded-3xl overflow-hidden shadow-elevated hover-lift group snap-center"
             >
               {/* Video player */}
               <div className="relative aspect-[9/16] bg-[var(--brand-green)]">
@@ -151,9 +151,9 @@ export default function Testimonials() {
                     }}
                     className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-colors"
                   >
-                    <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                    <div className="w-14 h-14 sm:w-16 sm:h-16 bg-white/90 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
                       <svg
-                        className="w-7 h-7 text-[var(--brand-green)] ml-1"
+                        className="w-6 h-6 sm:w-7 sm:h-7 text-[var(--brand-green)] ml-1"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >
@@ -169,13 +169,13 @@ export default function Testimonials() {
               </div>
 
               {/* Info section */}
-              <div className="p-6">
+              <div className="p-4 sm:p-5">
                 {/* Star rating */}
-                <div className="flex items-center gap-1 mb-3">
+                <div className="flex items-center gap-0.5 mb-2 sm:mb-3">
                   {[1, 2, 3, 4, 5].map((star) => (
                     <svg
                       key={star}
-                      className="w-4 h-4 text-[var(--brand-orange)]"
+                      className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[var(--brand-orange)]"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -184,19 +184,20 @@ export default function Testimonials() {
                   ))}
                 </div>
 
-                <p className="text-[var(--muted)] mb-4 text-sm leading-relaxed line-clamp-3">
+                {/* Full quote - no truncation */}
+                <p className="text-[var(--muted)] mb-3 sm:mb-4 text-xs sm:text-sm leading-relaxed">
                   &ldquo;{testimonial.quote}&rdquo;
                 </p>
 
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-[var(--brand-teal)] to-[var(--brand-green)] rounded-full flex items-center justify-center text-white font-bold text-sm">
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-[var(--brand-teal)] to-[var(--brand-green)] rounded-full flex items-center justify-center text-white font-bold text-xs sm:text-sm flex-shrink-0">
                     {testimonial.name.charAt(0)}
                   </div>
-                  <div>
-                    <p className="font-semibold text-[var(--brand-green)] text-sm">
+                  <div className="min-w-0">
+                    <p className="font-semibold text-[var(--brand-green)] text-xs sm:text-sm">
                       {testimonial.name}
                     </p>
-                    <p className="text-xs text-[var(--muted)]">
+                    <p className="text-[10px] sm:text-xs text-[var(--muted)]">
                       {testimonial.role}, {testimonial.company}
                     </p>
                   </div>

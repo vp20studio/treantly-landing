@@ -99,34 +99,34 @@ export default function HowItWorks() {
         {/* Steps */}
         <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
           {steps.map((step, index) => (
-            <div key={step.number} className="relative group pt-4">
+            <div key={step.number} className="relative group pt-5 pl-5 sm:pt-6 sm:pl-6">
               {/* Connector Line */}
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-20 left-[55%] w-[90%] h-1">
+                <div className="hidden md:block absolute top-24 left-[55%] w-[90%] h-1">
                   <div className="h-full bg-gradient-to-r from-[var(--brand-lime)] via-[var(--brand-teal)]/30 to-transparent rounded-full"></div>
                   <div className="absolute top-1/2 right-0 w-3 h-3 bg-[var(--brand-beige)] rounded-full -translate-y-1/2 border-2 border-[var(--brand-teal)]/30"></div>
                 </div>
               )}
 
-              <div className="glass rounded-3xl p-8 h-full shadow-elevated hover-lift relative overflow-hidden">
+              {/* Step Number - OUTSIDE the card */}
+              <div className={`absolute top-1 left-1 sm:top-2 sm:left-2 w-11 h-11 sm:w-14 sm:h-14 bg-gradient-to-br ${step.gradient} rounded-xl sm:rounded-2xl flex items-center justify-center text-white font-bold text-sm sm:text-lg shadow-lg z-10 transform group-hover:scale-110 transition-transform duration-300`}>
+                {step.number}
+              </div>
+
+              <div className="glass rounded-3xl p-6 sm:p-8 h-full shadow-elevated hover-lift relative overflow-hidden">
                 {/* Background gradient on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${step.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
 
-                {/* Step Number */}
-                <div className={`absolute -top-4 -left-4 w-14 h-14 bg-gradient-to-br ${step.gradient} rounded-2xl flex items-center justify-center text-white font-bold text-lg shadow-lg transform group-hover:scale-110 transition-transform duration-300`}>
-                  {step.number}
-                </div>
-
                 {/* Icon */}
-                <div className="w-16 h-16 bg-gradient-to-br from-[var(--brand-lime)] to-[#d4e87a] rounded-2xl flex items-center justify-center text-[var(--brand-green)] mb-6 mt-6 shadow-soft group-hover:shadow-lg transition-shadow duration-300">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-[var(--brand-lime)] to-[#d4e87a] rounded-xl sm:rounded-2xl flex items-center justify-center text-[var(--brand-green)] mb-4 sm:mb-6 shadow-soft group-hover:shadow-lg transition-shadow duration-300">
                   {step.icon}
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold text-[var(--brand-green)] mb-3 group-hover:text-gradient transition-colors">
+                <h3 className="text-lg sm:text-xl font-bold text-[var(--brand-green)] mb-2 sm:mb-3 group-hover:text-gradient transition-colors">
                   {step.title}
                 </h3>
-                <p className="text-[var(--muted)] leading-relaxed">
+                <p className="text-sm sm:text-base text-[var(--muted)] leading-relaxed">
                   {step.description}
                 </p>
 

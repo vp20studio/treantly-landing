@@ -33,7 +33,7 @@ export default function Hero() {
             </div>
 
             {/* Headline */}
-            <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-[var(--brand-green)] leading-[1.1] tracking-tight animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+            <h1 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[var(--brand-green)] leading-[1.1] tracking-tight animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
               Scale Your Operations with the{" "}
               <span className="text-gradient relative">
                 Top 1%
@@ -104,8 +104,8 @@ export default function Hero() {
             <div className="absolute -top-10 -left-10 w-40 h-40 bg-[var(--brand-lime)] blob opacity-60 animate-float"></div>
             <div className="absolute -bottom-10 -right-10 w-52 h-52 bg-[var(--brand-teal)] blob opacity-25 animate-float-delayed"></div>
 
-            {/* Floating Callouts */}
-            <div className="absolute -top-2 -left-4 lg:-top-4 lg:-left-12 glass px-4 py-3 rounded-xl shadow-elevated animate-float z-10 max-w-[180px]">
+            {/* Floating Callouts - Hidden on mobile */}
+            <div className="hidden lg:block absolute -top-4 -left-12 glass px-4 py-3 rounded-xl shadow-elevated animate-float z-10 max-w-[180px]">
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 bg-gradient-to-br from-[var(--brand-teal)] to-[#0a9f7d] rounded-lg flex items-center justify-center flex-shrink-0">
                   <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -116,7 +116,7 @@ export default function Hero() {
               </div>
             </div>
 
-            <div className="absolute top-1/4 -right-4 lg:-right-12 glass px-4 py-3 rounded-xl shadow-elevated animate-float-delayed z-10 max-w-[180px]">
+            <div className="hidden lg:block absolute top-1/4 -right-12 glass px-4 py-3 rounded-xl shadow-elevated animate-float-delayed z-10 max-w-[180px]">
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 bg-gradient-to-br from-[var(--brand-lime)] to-[#d4e87a] rounded-lg flex items-center justify-center flex-shrink-0">
                   <svg className="w-4 h-4 text-[var(--brand-green)]" fill="currentColor" viewBox="0 0 20 20">
@@ -127,7 +127,7 @@ export default function Hero() {
               </div>
             </div>
 
-            <div className="absolute bottom-1/4 -left-4 lg:-left-12 glass px-4 py-3 rounded-xl shadow-elevated animate-float z-10 max-w-[180px]">
+            <div className="hidden lg:block absolute bottom-1/4 -left-12 glass px-4 py-3 rounded-xl shadow-elevated animate-float z-10 max-w-[180px]">
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 bg-gradient-to-br from-[var(--brand-green)] to-[#3d5f45] rounded-lg flex items-center justify-center flex-shrink-0">
                   <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -139,7 +139,7 @@ export default function Hero() {
               </div>
             </div>
 
-            <div className="absolute -bottom-2 -right-4 lg:-bottom-4 lg:-right-8 glass px-4 py-3 rounded-xl shadow-elevated animate-float-delayed z-10 max-w-[180px]">
+            <div className="hidden lg:block absolute -bottom-4 -right-8 glass px-4 py-3 rounded-xl shadow-elevated animate-float-delayed z-10 max-w-[180px]">
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 bg-gradient-to-br from-[var(--brand-orange)] to-[#f0b85a] rounded-lg flex items-center justify-center flex-shrink-0">
                   <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
