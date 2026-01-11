@@ -291,6 +291,16 @@ body {
   }
 }
 
+/* Hide scrollbar for horizontal scroll carousels */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 /* Selection */
 ::selection {
   background: var(--brand-lime);
