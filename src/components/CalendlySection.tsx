@@ -54,53 +54,64 @@ export default function CalendlySection() {
             <div
               className="calendly-inline-widget"
               data-url="https://calendly.com/vp20studio-info/30min?hide_gdpr_banner=1&background_color=fffdf7&text_color=2e4934&primary_color=068466"
-              style={{ minWidth: "320px", height: "700px" }}
+              style={{ minWidth: "320px", height: "800px" }}
             ></div>
           </div>
         </div>
 
-        {/* Trust Elements */}
-        <div className="mt-16 grid sm:grid-cols-3 gap-8">
+        {/* Value Callouts */}
+        <div className="mt-16 grid sm:grid-cols-2 gap-6">
           {[
             {
               icon: (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd" />
                 </svg>
               ),
-              title: "30-Minute Call",
-              description: "Quick, focused consultation",
+              text: "Source any role for your business",
+              gradient: "from-[var(--brand-teal)] to-[#0a9f7d]",
+              iconColor: "text-white",
             },
             {
               icon: (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
               ),
-              title: "No Obligation",
-              description: "Zero pressure, just information",
+              text: "We personally vet and meet candidates for you",
+              gradient: "from-[var(--brand-lime)] to-[#d4e87a]",
+              iconColor: "text-[var(--brand-green)]",
             },
             {
               icon: (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z" />
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clipRule="evenodd" />
                 </svg>
               ),
-              title: "Fast Matching",
-              description: "Meet candidates in 48 hours",
+              text: "Interview candidates first. Pay nothing upfront",
+              gradient: "from-[var(--brand-green)] to-[#3d5f45]",
+              iconColor: "text-white",
+            },
+            {
+              icon: (
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+              ),
+              text: "One-week guarantee with your hire or your money back",
+              gradient: "from-[var(--brand-orange)] to-[#f0b85a]",
+              iconColor: "text-white",
             },
           ].map((item, index) => (
             <div
               key={index}
-              className="flex flex-col items-center gap-3 p-6 rounded-2xl bg-white/50 backdrop-blur-sm shadow-soft hover-lift text-center"
+              className="flex items-center gap-4 p-5 rounded-2xl bg-white/50 backdrop-blur-sm shadow-soft hover-lift"
             >
-              <div className="w-14 h-14 bg-gradient-to-br from-[var(--brand-lime)] to-[#d4e87a] rounded-2xl flex items-center justify-center text-[var(--brand-green)] shadow-soft">
+              <div className={`w-12 h-12 bg-gradient-to-br ${item.gradient} rounded-xl flex items-center justify-center ${item.iconColor} shadow-soft flex-shrink-0`}>
                 {item.icon}
               </div>
-              <p className="font-semibold text-[var(--brand-green)]">
-                {item.title}
-              </p>
-              <p className="text-sm text-[var(--muted)]">{item.description}</p>
+              <p className="font-medium text-[var(--brand-green)]">{item.text}</p>
             </div>
           ))}
         </div>

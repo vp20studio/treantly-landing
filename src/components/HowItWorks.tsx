@@ -26,7 +26,7 @@ export default function HowItWorks() {
       number: "02",
       title: "Matching",
       description:
-        "You meet the top 3 hand-picked candidates from our pre-vetted talent pool. Interview them risk-free.",
+        "Within 1-2 weeks, you meet the top 3 hand-picked candidates from our pre-vetted talent pool. Interview them risk-free.",
       icon: (
         <svg
           className="w-8 h-8"
@@ -48,7 +48,7 @@ export default function HowItWorks() {
       number: "03",
       title: "Onboarding",
       description:
-        "Your new team member starts within 48 hours. We handle the infrastructure so you can focus on growth.",
+        "Your new team member starts once you make your selection. We handle the infrastructure so you can focus on growth.",
       icon: (
         <svg
           className="w-8 h-8"
@@ -91,8 +91,8 @@ export default function HowItWorks() {
             How It Works
           </h2>
           <p className="text-lg text-[var(--muted)] max-w-2xl mx-auto">
-            From first call to your VA starting work - the entire process takes
-            less than 48 hours.
+            From first call to your VA starting work - we handle everything so
+            you can focus on your business.
           </p>
         </div>
 
@@ -143,7 +143,7 @@ export default function HowItWorks() {
             href="#book-call"
             className="group inline-flex items-center gap-3 btn-primary text-[var(--brand-cream)] px-10 py-5 rounded-2xl font-semibold text-lg"
           >
-            Start Your Discovery Call
+            Get Started
             <svg
               className="w-5 h-5 transition-transform group-hover:translate-x-1"
               fill="none"
@@ -159,7 +159,7 @@ export default function HowItWorks() {
             </svg>
           </a>
           <p className="mt-4 text-sm text-[var(--muted)]">
-            No commitment required. Just a friendly conversation.
+            No commitment required. Pay nothing until you hire.
           </p>
         </div>
       </div>

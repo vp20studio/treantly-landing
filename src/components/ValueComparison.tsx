@@ -10,9 +10,9 @@ export default function ValueComparison() {
 
   const treantlyItems = [
     { label: "Monthly Cost", value: "$1,200/mo", highlight: true },
-    { label: "Time to Hire", value: "48 hours" },
+    { label: "Time to Hire", value: "1-2 weeks" },
     { label: "Payroll Taxes", value: "0%" },
-    { label: "Benefits & Insurance", value: "$0" },
+    { label: "Benefits & Insurance", value: "$0 (We cover it)" },
     { label: "Turnover Risk", value: "Low (Pre-vetted)" },
     { label: "Training Time", value: "Already trained" },
   ];
@@ -32,7 +32,7 @@ export default function ValueComparison() {
             <svg className="w-5 h-5 text-[var(--brand-teal)]" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
             </svg>
-            <span className="text-sm font-semibold text-[var(--brand-green)]">Save 80% on hiring costs</span>
+            <span className="text-sm font-semibold text-[var(--brand-green)]">Save 40%-60% on hiring costs</span>
           </div>
           <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--brand-green)] mb-4">
             The Math of Scaling Smarter
@@ -195,6 +195,21 @@ export default function ValueComparison() {
                   Save $57,600+ per year
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Health Insurance Callout */}
+        <div className="mt-12 max-w-5xl mx-auto p-6 bg-gradient-to-r from-[var(--brand-teal)]/10 to-[var(--brand-lime)]/10 rounded-2xl border border-[var(--brand-teal)]/20">
+          <div className="flex items-center gap-4">
+            <div className="w-14 h-14 bg-gradient-to-br from-[var(--brand-teal)] to-[#0a9f7d] rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+              <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </div>
+            <div>
+              <p className="font-bold text-[var(--brand-green)] text-lg">WE pay for employee health insurance</p>
+              <p className="text-[var(--muted)]">For all roles you hire through Treantly - included at no extra cost to you.</p>
             </div>
           </div>
         </div>

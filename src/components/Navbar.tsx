@@ -37,6 +37,12 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             <Link
+              href="#testimonials"
+              className="relative text-[var(--brand-green)] font-medium transition-colors hover:text-[var(--brand-teal)] after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[var(--brand-teal)] after:transition-all hover:after:w-full"
+            >
+              Testimonials
+            </Link>
+            <Link
               href="#how-it-works"
               className="relative text-[var(--brand-green)] font-medium transition-colors hover:text-[var(--brand-teal)] after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[var(--brand-teal)] after:transition-all hover:after:w-full"
             >
@@ -100,6 +106,13 @@ export default function Navbar() {
           }`}
         >
           <div className="flex flex-col gap-2 py-4 border-t border-[var(--brand-green)]/10">
+            <Link
+              href="#testimonials"
+              className="text-[var(--brand-green)] hover:text-[var(--brand-teal)] transition-colors font-medium py-3 px-4 rounded-xl hover:bg-[var(--brand-beige)]"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Testimonials
+            </Link>
             <Link
               href="#how-it-works"
               className="text-[var(--brand-green)] hover:text-[var(--brand-teal)] transition-colors font-medium py-3 px-4 rounded-xl hover:bg-[var(--brand-beige)]"

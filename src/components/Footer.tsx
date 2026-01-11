@@ -68,6 +68,7 @@ export default function Footer() {
             <h4 className="font-semibold mb-6 text-lg">Quick Links</h4>
             <ul className="space-y-4">
               {[
+                { href: "#testimonials", label: "Testimonials" },
                 { href: "#how-it-works", label: "How It Works" },
                 { href: "#pricing", label: "Pricing" },
                 { href: "#faq", label: "FAQ" },
