@@ -9,7 +9,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen pt-32 pb-16 px-6 lg:px-8 bg-[var(--brand-cream)] overflow-hidden">
+    <section className="relative pt-24 sm:pt-28 pb-12 sm:pb-16 px-6 lg:px-8 bg-[var(--brand-cream)] overflow-hidden">
       {/* Background decorations */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--brand-lime)] rounded-full blur-[100px] opacity-40 animate-float"></div>
