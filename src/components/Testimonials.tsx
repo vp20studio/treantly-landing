@@ -116,14 +116,14 @@ export default function Testimonials() {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
               className="glass rounded-3xl overflow-hidden shadow-elevated hover-lift group"
             >
               {/* Video player */}
-              <div className="relative aspect-video bg-[var(--brand-green)]">
+              <div className="relative aspect-[9/16] bg-[var(--brand-green)]">
                 <video
                   ref={(el) => {
                     videoRefs.current[testimonial.id] = el;

@@ -99,7 +99,7 @@ export default function HowItWorks() {
         {/* Steps */}
         <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
           {steps.map((step, index) => (
-            <div key={step.number} className="relative group">
+            <div key={step.number} className="relative group pt-4">
               {/* Connector Line */}
               {index < steps.length - 1 && (
                 <div className="hidden md:block absolute top-20 left-[55%] w-[90%] h-1">
