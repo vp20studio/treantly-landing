@@ -22,7 +22,7 @@ export default function CalendlySection() {
   return (
     <section
       id="book-call"
-      className="relative py-24 px-6 lg:px-8 bg-[var(--brand-beige)] overflow-hidden"
+      className="relative py-16 sm:py-20 lg:py-24 px-6 lg:px-8 bg-[var(--brand-beige)] overflow-hidden"
     >
       {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none">
@@ -31,18 +31,18 @@ export default function CalendlySection() {
 
       <div className="relative max-w-5xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[var(--brand-teal)] to-[#0a9f7d] text-white px-5 py-2.5 rounded-full shadow-lg mb-6">
-            <span className="relative flex h-2.5 w-2.5">
+        <div className="text-center mb-8 sm:mb-10 lg:mb-12">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[var(--brand-teal)] to-[#0a9f7d] text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-full shadow-lg mb-5 sm:mb-6">
+            <span className="relative flex h-2 w-2 sm:h-2.5 sm:w-2.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 sm:h-2.5 sm:w-2.5 bg-white"></span>
             </span>
-            <span className="text-sm font-semibold">Limited Availability</span>
+            <span className="text-xs sm:text-sm font-semibold">Limited Availability</span>
           </div>
-          <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--brand-green)] mb-4">
+          <h2 className="font-[family-name:var(--font-playfair)] text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-[var(--brand-green)] mb-3 sm:mb-4">
             Find Your Perfect Match
           </h2>
-          <p className="text-lg text-[var(--muted)] max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base lg:text-lg text-[var(--muted)] max-w-2xl mx-auto">
             Select a time below to speak with our placement team. We&apos;ll discuss
             your needs and match you with the ideal candidate.
           </p>
@@ -60,7 +60,7 @@ export default function CalendlySection() {
         </div>
 
         {/* Value Callouts */}
-        <div className="mt-16 grid sm:grid-cols-2 gap-6">
+        <div className="mt-10 sm:mt-12 lg:mt-16 grid sm:grid-cols-2 gap-4 sm:gap-6">
           {[
             {
               icon: (
@@ -106,12 +106,12 @@ export default function CalendlySection() {
           ].map((item, index) => (
             <div
               key={index}
-              className="flex items-center gap-4 p-5 rounded-2xl bg-white/50 backdrop-blur-sm shadow-soft hover-lift"
+              className="flex items-center gap-3 sm:gap-4 p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white/50 backdrop-blur-sm shadow-soft hover-lift"
             >
-              <div className={`w-12 h-12 bg-gradient-to-br ${item.gradient} rounded-xl flex items-center justify-center ${item.iconColor} shadow-soft flex-shrink-0`}>
+              <div className={`w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br ${item.gradient} rounded-lg sm:rounded-xl flex items-center justify-center ${item.iconColor} shadow-soft flex-shrink-0`}>
                 {item.icon}
               </div>
-              <p className="font-medium text-[var(--brand-green)]">{item.text}</p>
+              <p className="font-medium text-[var(--brand-green)] text-sm sm:text-base">{item.text}</p>
             </div>
           ))}
         </div>

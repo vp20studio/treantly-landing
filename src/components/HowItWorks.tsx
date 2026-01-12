@@ -69,7 +69,7 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="relative py-24 px-6 lg:px-8 bg-[var(--brand-cream)] overflow-hidden">
+    <section id="how-it-works" className="relative py-16 sm:py-20 lg:py-24 px-6 lg:px-8 bg-[var(--brand-cream)] overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-0 w-72 h-72 bg-[var(--brand-lime)] rounded-full blur-[120px] opacity-30 -translate-y-1/2"></div>
@@ -78,19 +78,19 @@ export default function HowItWorks() {
 
       <div className="relative max-w-6xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[var(--brand-lime)] to-[#d4e87a] px-5 py-2.5 rounded-full shadow-soft mb-6">
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[var(--brand-lime)] to-[#d4e87a] px-4 sm:px-5 py-2 sm:py-2.5 rounded-full shadow-soft mb-5 sm:mb-6">
             <svg className="w-4 h-4 text-[var(--brand-green)]" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
             </svg>
-            <span className="text-sm font-semibold text-[var(--brand-green)]">
+            <span className="text-xs sm:text-sm font-semibold text-[var(--brand-green)]">
               Simple 3-Step Process
             </span>
           </div>
-          <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--brand-green)] mb-4">
+          <h2 className="font-[family-name:var(--font-playfair)] text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-[var(--brand-green)] mb-3 sm:mb-4">
             How It Works
           </h2>
-          <p className="text-lg text-[var(--muted)] max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-[var(--muted)] max-w-2xl mx-auto">
             From first call to your VA starting work - we handle everything so
             you can focus on your business.
           </p>
@@ -138,10 +138,10 @@ export default function HowItWorks() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-20">
+        <div className="text-center mt-12 sm:mt-16 lg:mt-20">
           <a
             href="#book-call"
-            className="group inline-flex items-center gap-3 btn-primary text-[var(--brand-cream)] px-10 py-5 rounded-2xl font-semibold text-lg"
+            className="group inline-flex items-center gap-2 sm:gap-3 btn-primary text-[var(--brand-cream)] px-6 sm:px-10 py-4 sm:py-5 rounded-xl sm:rounded-2xl font-semibold text-base sm:text-lg w-full sm:w-auto justify-center"
           >
             Get Started
             <svg
@@ -158,7 +158,7 @@ export default function HowItWorks() {
               />
             </svg>
           </a>
-          <p className="mt-4 text-sm text-[var(--muted)]">
+          <p className="mt-3 sm:mt-4 text-xs sm:text-sm text-[var(--muted)]">
             No commitment required. Pay nothing until you hire.
           </p>
         </div>

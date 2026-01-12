@@ -4,7 +4,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-gradient-to-br from-[var(--brand-green)] to-[#1f3326] text-[var(--brand-cream)] py-20 px-6 lg:px-8 overflow-hidden">
+    <footer className="relative bg-gradient-to-br from-[var(--brand-green)] to-[#1f3326] text-[var(--brand-cream)] py-12 sm:py-16 lg:py-20 px-6 lg:px-8 overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--brand-teal)] rounded-full blur-[200px] opacity-20"></div>
@@ -12,17 +12,17 @@ export default function Footer() {
       </div>
 
       <div className="relative max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-4 gap-12 mb-16">
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-10 sm:mb-12 lg:mb-16">
           {/* Brand Column */}
-          <div className="md:col-span-2">
-            <Link href="/" className="inline-block mb-6 group">
+          <div className="sm:col-span-2 md:col-span-2">
+            <Link href="/" className="inline-block mb-4 sm:mb-6 group">
               <img
                 src="/logo-lime.png"
                 alt="Treantly"
-                className="h-8 sm:h-10 w-auto transition-transform group-hover:scale-105"
+                className="h-7 sm:h-8 lg:h-10 w-auto transition-transform group-hover:scale-105"
               />
             </Link>
-            <p className="text-[var(--brand-cream)]/70 max-w-sm mb-8 leading-relaxed">
+            <p className="text-[var(--brand-cream)]/70 max-w-sm mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">
               Connecting businesses with the top 1% of global virtual assistant
               talent. Scale smarter, not harder.
             </p>
@@ -65,8 +65,8 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-6 text-lg">Quick Links</h4>
-            <ul className="space-y-4">
+            <h4 className="font-semibold mb-4 sm:mb-6 text-base sm:text-lg">Quick Links</h4>
+            <ul className="space-y-3 sm:space-y-4">
               {[
                 { href: "#testimonials", label: "Testimonials" },
                 { href: "#how-it-works", label: "How It Works" },
@@ -89,8 +89,8 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold mb-6 text-lg">Contact</h4>
-            <ul className="space-y-4">
+            <h4 className="font-semibold mb-4 sm:mb-6 text-base sm:text-lg">Contact</h4>
+            <ul className="space-y-3 sm:space-y-4">
               <li>
                 <a
                   href="mailto:hello@treantly.com"

@@ -22,12 +22,12 @@ export default function Hero() {
           {/* Left Column - Copy */}
           <div className="space-y-6">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-[var(--brand-lime)]/80 backdrop-blur-sm px-5 py-2.5 rounded-full shadow-soft animate-fade-in-up">
-              <span className="relative flex h-2.5 w-2.5">
+            <div className="inline-flex items-center gap-2 bg-[var(--brand-lime)]/80 backdrop-blur-sm px-3 sm:px-5 py-2 sm:py-2.5 rounded-full shadow-soft animate-fade-in-up">
+              <span className="relative flex h-2 w-2 sm:h-2.5 sm:w-2.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--brand-teal)] opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[var(--brand-teal)]"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 sm:h-2.5 sm:w-2.5 bg-[var(--brand-teal)]"></span>
               </span>
-              <span className="text-sm font-semibold text-[var(--brand-green)]">
+              <span className="text-xs sm:text-sm font-semibold text-[var(--brand-green)]">
                 Over 200 businesses work with Treantly
               </span>
             </div>
@@ -45,17 +45,17 @@ export default function Hero() {
             </h1>
 
             {/* Subheadline */}
-            <p className="text-lg sm:text-xl text-[var(--muted)] leading-relaxed max-w-xl animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+            <p className="text-base sm:text-lg lg:text-xl text-[var(--muted)] leading-relaxed max-w-xl animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               Stop overpaying for local operations. Hire pre-vetted,
               English-speaking Virtual Assistants and scale your team with
-              <span className="font-semibold text-[var(--brand-green)] bg-[var(--brand-lime)]/50 px-2 py-0.5 rounded ml-1">top talent</span>.
+              <span className="font-semibold text-[var(--brand-green)] bg-[var(--brand-lime)]/50 px-1.5 sm:px-2 py-0.5 rounded ml-1">top talent</span>.
             </p>
 
             {/* Get Started Button */}
             <div className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
               <button
                 onClick={handleGetStarted}
-                className="btn-primary text-[var(--brand-cream)] px-8 py-4 rounded-2xl font-semibold text-lg whitespace-nowrap flex items-center justify-center gap-2 group"
+                className="btn-primary text-[var(--brand-cream)] px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl sm:rounded-2xl font-semibold text-base sm:text-lg whitespace-nowrap flex items-center justify-center gap-2 group w-full sm:w-auto"
               >
                 Get Started
                 <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -65,8 +65,8 @@ export default function Hero() {
             </div>
 
             {/* Trust Indicators */}
-            <div className="flex flex-wrap items-center gap-6 pt-2 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-              <div className="flex -space-x-3">
+            <div className="flex flex-wrap items-center gap-4 sm:gap-6 pt-2 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
+              <div className="flex -space-x-2 sm:-space-x-3">
                 {[
                   { src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face", name: "James" },
                   { src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face", name: "Sarah" },
@@ -78,18 +78,18 @@ export default function Hero() {
                     key={i}
                     src={avatar.src}
                     alt={avatar.name}
-                    className="w-11 h-11 rounded-full border-3 border-[var(--brand-cream)] object-cover shadow-lg transition-transform hover:scale-110 hover:z-10"
+                    className="w-9 h-9 sm:w-11 sm:h-11 rounded-full border-2 sm:border-3 border-[var(--brand-cream)] object-cover shadow-lg transition-transform hover:scale-110 hover:z-10"
                     style={{ animationDelay: `${0.5 + i * 0.1}s` }}
                   />
                 ))}
               </div>
               <div>
                 <div className="flex items-center gap-1">
-                  <span className="font-bold text-[var(--brand-green)] text-lg">500+</span>
-                  <span className="text-[var(--brand-green)] font-medium">Placements</span>
+                  <span className="font-bold text-[var(--brand-green)] text-base sm:text-lg">500+</span>
+                  <span className="text-[var(--brand-green)] font-medium text-sm sm:text-base">Placements</span>
                 </div>
-                <div className="flex items-center gap-1 text-sm text-[var(--muted)]">
-                  <svg className="w-4 h-4 text-[var(--brand-orange)]" fill="currentColor" viewBox="0 0 20 20">
+                <div className="flex items-center gap-1 text-xs sm:text-sm text-[var(--muted)]">
+                  <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[var(--brand-orange)]" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
                   <span>4.9/5 from 200+ reviews</span>
