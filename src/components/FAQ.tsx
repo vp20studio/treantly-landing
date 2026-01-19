@@ -128,7 +128,9 @@ export default function FAQ() {
         <div className="text-center mt-10 sm:mt-12 lg:mt-16 p-5 sm:p-6 lg:p-8 glass rounded-2xl sm:rounded-3xl shadow-soft">
           <p className="text-[var(--brand-green)] font-medium mb-3 sm:mb-4 text-sm sm:text-base">Still have questions?</p>
           <a
-            href="#book-call"
+            href="https://calendly.com/mponce-treantly/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group inline-flex items-center gap-2 btn-primary text-[var(--brand-cream)] px-6 sm:px-8 py-3 sm:py-4 rounded-lg sm:rounded-xl font-semibold text-sm sm:text-base w-full sm:w-auto justify-center"
           >
             Schedule a call with our team

@@ -1,13 +1,4 @@
-"use client";
-
 export default function Hero() {
-  const handleGetStarted = () => {
-    const bookCallSection = document.getElementById("book-call");
-    if (bookCallSection) {
-      bookCallSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <section className="relative pt-32 sm:pt-36 lg:pt-40 pb-12 sm:pb-16 px-6 lg:px-8 bg-[var(--brand-cream)] overflow-hidden">
       {/* Background decorations */}
@@ -53,15 +44,17 @@ export default function Hero() {
 
             {/* Get Started Button */}
             <div className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-              <button
-                onClick={handleGetStarted}
+              <a
+                href="https://calendly.com/mponce-treantly/30min"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-primary text-[var(--brand-cream)] px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl sm:rounded-2xl font-semibold text-base sm:text-lg whitespace-nowrap flex items-center justify-center gap-2 group w-full sm:w-auto"
               >
                 Get Started
                 <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </button>
+              </a>
             </div>
 
             {/* Trust Indicators */}

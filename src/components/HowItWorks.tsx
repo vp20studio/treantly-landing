@@ -140,7 +140,9 @@ export default function HowItWorks() {
         {/* Bottom CTA */}
         <div className="text-center mt-12 sm:mt-16 lg:mt-20">
           <a
-            href="#book-call"
+            href="https://calendly.com/mponce-treantly/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group inline-flex items-center gap-2 sm:gap-3 btn-primary text-[var(--brand-cream)] px-6 sm:px-10 py-4 sm:py-5 rounded-xl sm:rounded-2xl font-semibold text-base sm:text-lg w-full sm:w-auto justify-center"
           >
             Get Started

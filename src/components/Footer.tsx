@@ -72,7 +72,6 @@ export default function Footer() {
                 { href: "#how-it-works", label: "How It Works" },
                 { href: "#pricing", label: "Pricing" },
                 { href: "#faq", label: "FAQ" },
-                { href: "#book-call", label: "Book a Call" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -84,6 +83,17 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <a
+                  href="https://calendly.com/mponce-treantly/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[var(--brand-cream)]/70 hover:text-[var(--brand-cream)] transition-colors inline-flex items-center gap-2 group"
+                >
+                  <span className="w-1.5 h-1.5 bg-[var(--brand-teal)] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                  Book a Call
+                </a>
+              </li>
             </ul>
           </div>
 

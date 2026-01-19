@@ -256,7 +256,9 @@ export default function Testimonials() {
               </p>
             </div>
             <a
-              href="#book-call"
+              href="https://calendly.com/mponce-treantly/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-[var(--brand-green)] text-white px-6 py-3 rounded-full font-medium text-sm hover:bg-[var(--brand-teal)] transition-colors shadow-lg hover:shadow-xl"
             >
               Join them today

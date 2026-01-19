@@ -60,12 +60,14 @@ export default function Navbar() {
             >
               FAQ
             </Link>
-            <Link
-              href="#book-call"
+            <a
+              href="https://calendly.com/mponce-treantly/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary text-[var(--brand-cream)] px-6 py-3 rounded-full font-semibold"
             >
               Book a Call
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -134,13 +136,15 @@ export default function Navbar() {
             >
               FAQ
             </Link>
-            <Link
-              href="#book-call"
+            <a
+              href="https://calendly.com/mponce-treantly/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary text-[var(--brand-cream)] px-6 py-3 rounded-full font-semibold text-center mt-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Book a Call
-            </Link>
+            </a>
           </div>
         </div>
       </div>
