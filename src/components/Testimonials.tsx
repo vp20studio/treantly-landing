@@ -137,7 +137,7 @@ export default function Testimonials() {
                     src={testimonial.videoUrl}
                     className="w-full h-full object-cover"
                     playsInline
-                    preload="none"
+                    preload="metadata"
                     onEnded={handleVideoEnd}
                     onClick={() => {
                       if (activeVideo === testimonial.id) {
