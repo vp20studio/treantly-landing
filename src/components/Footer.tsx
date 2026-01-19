@@ -98,9 +98,8 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-[var(--brand-cream)]/70 hover:text-[var(--brand-cream)] transition-colors inline-flex items-center gap-2 group"
+                    className="text-[var(--brand-cream)]/70 hover:text-[var(--brand-cream)] transition-colors"
                   >
-                    <span className="w-1.5 h-1.5 bg-[var(--brand-teal)] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     {link.label}
                   </Link>
                 </li>
@@ -110,9 +109,8 @@ export default function Footer() {
                   href="https://calendly.com/mponce-treantly/30min"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[var(--brand-cream)]/70 hover:text-[var(--brand-cream)] transition-colors inline-flex items-center gap-2 group"
+                  className="text-[var(--brand-cream)]/70 hover:text-[var(--brand-cream)] transition-colors"
                 >
-                  <span className="w-1.5 h-1.5 bg-[var(--brand-teal)] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                   Book a Call
                 </a>
               </li>
