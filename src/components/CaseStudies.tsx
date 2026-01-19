@@ -185,8 +185,8 @@ export default function CaseStudies() {
                   >
                     {industryIcons[study.industry]}
                   </div>
-                  <div className="min-w-0 pr-16 sm:pr-20">
-                    <h3 className="font-bold text-[var(--brand-green)] text-base sm:text-lg group-hover:text-[var(--brand-teal)] transition-colors truncate">
+                  <div className="min-w-0 flex-1">
+                    <h3 className="font-bold text-[var(--brand-green)] text-base sm:text-lg group-hover:text-[var(--brand-teal)] transition-colors">
                       {study.name}
                     </h3>
                     <span
