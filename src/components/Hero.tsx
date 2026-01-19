@@ -98,57 +98,11 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Column - Video Call Placeholder with Floating Callouts */}
+          {/* Right Column - Video Call Card */}
           <div className="relative animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
             {/* Decorative elements */}
             <div className="absolute -top-10 -left-10 w-40 h-40 bg-[var(--brand-lime)] blob opacity-60 animate-float"></div>
             <div className="absolute -bottom-10 -right-10 w-52 h-52 bg-[var(--brand-teal)] blob opacity-25 animate-float-delayed"></div>
-
-            {/* Floating Callouts - Hidden on mobile */}
-            <div className="hidden lg:block absolute -top-4 -left-12 glass px-4 py-3 rounded-xl shadow-elevated animate-float z-10 max-w-[180px]">
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-gradient-to-br from-[var(--brand-teal)] to-[#0a9f7d] rounded-lg flex items-center justify-center flex-shrink-0">
-                  <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <p className="text-xs font-medium text-[var(--brand-green)]">Source any role for your business</p>
-              </div>
-            </div>
-
-            <div className="hidden lg:block absolute top-1/4 -right-12 glass px-4 py-3 rounded-xl shadow-elevated animate-float-delayed z-10 max-w-[180px]">
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-gradient-to-br from-[var(--brand-lime)] to-[#d4e87a] rounded-lg flex items-center justify-center flex-shrink-0">
-                  <svg className="w-4 h-4 text-[var(--brand-green)]" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <p className="text-xs font-medium text-[var(--brand-green)]">We personally vet and meet candidates for you</p>
-              </div>
-            </div>
-
-            <div className="hidden lg:block absolute bottom-1/4 -left-12 glass px-4 py-3 rounded-xl shadow-elevated animate-float z-10 max-w-[180px]">
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-gradient-to-br from-[var(--brand-green)] to-[#3d5f45] rounded-lg flex items-center justify-center flex-shrink-0">
-                  <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z" />
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <p className="text-xs font-medium text-[var(--brand-green)]">Interview candidates first. Pay nothing upfront</p>
-              </div>
-            </div>
-
-            <div className="hidden lg:block absolute -bottom-4 -right-8 glass px-4 py-3 rounded-xl shadow-elevated animate-float-delayed z-10 max-w-[180px]">
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-gradient-to-br from-[var(--brand-orange)] to-[#f0b85a] rounded-lg flex items-center justify-center flex-shrink-0">
-                  <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <p className="text-xs font-medium text-[var(--brand-green)]">One-week guarantee with your hire or your money back</p>
-              </div>
-            </div>
 
             {/* Video Call Card */}
             <div className="relative glass rounded-3xl p-3 sm:p-4 shadow-elevated max-w-lg mx-auto lg:mx-0 overflow-hidden">
@@ -176,6 +130,72 @@ export default function Hero() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Features Bar */}
+        <div className="mt-12 sm:mt-16 lg:mt-20 animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            {[
+              {
+                icon: (
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd" />
+                  </svg>
+                ),
+                title: "Source Any Role",
+                description: "Find talent for any position",
+                gradient: "from-[var(--brand-teal)] to-[#0a9f7d]",
+                iconColor: "text-white",
+              },
+              {
+                icon: (
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                ),
+                title: "Pre-Vetted Talent",
+                description: "We meet every candidate",
+                gradient: "from-[var(--brand-lime)] to-[#d4e87a]",
+                iconColor: "text-[var(--brand-green)]",
+              },
+              {
+                icon: (
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z" />
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clipRule="evenodd" />
+                  </svg>
+                ),
+                title: "Pay Nothing Upfront",
+                description: "Interview candidates first",
+                gradient: "from-[var(--brand-green)] to-[#3d5f45]",
+                iconColor: "text-white",
+              },
+              {
+                icon: (
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                ),
+                title: "1-Week Guarantee",
+                description: "Or your money back",
+                gradient: "from-[var(--brand-orange)] to-[#f0b85a]",
+                iconColor: "text-white",
+              },
+            ].map((feature, index) => (
+              <div
+                key={index}
+                className="flex items-center gap-3 p-4 rounded-2xl bg-white/60 backdrop-blur-sm shadow-soft hover:shadow-md transition-shadow"
+              >
+                <div className={`w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br ${feature.gradient} rounded-xl flex items-center justify-center ${feature.iconColor} shadow-soft flex-shrink-0`}>
+                  {feature.icon}
+                </div>
+                <div className="min-w-0">
+                  <p className="font-semibold text-[var(--brand-green)] text-sm sm:text-base truncate">{feature.title}</p>
+                  <p className="text-xs sm:text-sm text-[var(--muted)] truncate">{feature.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
