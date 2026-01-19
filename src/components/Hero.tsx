@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section className="relative pt-32 sm:pt-36 lg:pt-40 pb-12 sm:pb-16 px-6 lg:px-8 bg-[var(--brand-cream)] overflow-hidden">
@@ -101,10 +103,14 @@ export default function Hero() {
             <div className="relative glass rounded-3xl p-3 sm:p-4 shadow-elevated max-w-lg mx-auto lg:mx-0 overflow-hidden">
               {/* Video call image container */}
               <div className="relative rounded-2xl overflow-hidden">
-                <img
+                <Image
                   src="/hero-video-call.png"
                   alt="Victor from Treantly interviewing a VA candidate"
+                  width={600}
+                  height={400}
                   className="w-full h-auto object-contain rounded-2xl"
+                  priority
+                  quality={85}
                 />
               </div>
 
