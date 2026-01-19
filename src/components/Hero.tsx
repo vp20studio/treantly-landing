@@ -150,64 +150,24 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Video Call Placeholder Card */}
+            {/* Video Call Card */}
             <div className="relative glass rounded-3xl p-4 shadow-elevated max-w-lg mx-auto lg:mx-0 overflow-hidden">
-              {/* Video call mockup container */}
-              <div className="relative bg-gradient-to-br from-[var(--brand-green)] to-[#1f3326] rounded-2xl aspect-video overflow-hidden">
-                {/* Video call grid */}
-                <div className="absolute inset-0 grid grid-cols-2 gap-1 p-2">
-                  {/* Left participant - Treantly team member */}
-                  <div className="relative bg-[#2a4a35] rounded-xl overflow-hidden flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-16 h-16 mx-auto bg-gradient-to-br from-[var(--brand-teal)] to-[var(--brand-green)] rounded-full flex items-center justify-center mb-2">
-                        <span className="text-white font-bold text-xl">VK</span>
-                      </div>
-                      <p className="text-white/80 text-xs">Victor K.</p>
-                      <p className="text-white/50 text-[10px]">Treantly Team</p>
-                    </div>
-                    {/* Mic indicator */}
-                    <div className="absolute bottom-2 left-2 w-6 h-6 bg-[var(--brand-teal)] rounded-full flex items-center justify-center">
-                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                  </div>
+              {/* Video call image container */}
+              <div className="relative rounded-2xl aspect-video overflow-hidden">
+                <img
+                  src="/hero-video-call.png"
+                  alt="Victor from Treantly interviewing a VA candidate"
+                  className="w-full h-full object-cover"
+                />
 
-                  {/* Right participant - Candidate */}
-                  <div className="relative bg-[#2a4a35] rounded-xl overflow-hidden flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-16 h-16 mx-auto bg-gradient-to-br from-[var(--brand-lime)] to-[#a8c45a] rounded-full flex items-center justify-center mb-2">
-                        <span className="text-[var(--brand-green)] font-bold text-xl">SM</span>
-                      </div>
-                      <p className="text-white/80 text-xs">Sarah M.</p>
-                      <p className="text-white/50 text-[10px]">VA Candidate</p>
-                    </div>
-                    {/* Mic indicator */}
-                    <div className="absolute bottom-2 left-2 w-6 h-6 bg-[var(--brand-lime)] rounded-full flex items-center justify-center">
-                      <svg className="w-3 h-3 text-[var(--brand-green)]" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                  </div>
+                {/* Name labels overlay */}
+                <div className="absolute bottom-3 left-3 bg-black/50 backdrop-blur-sm px-3 py-1.5 rounded-lg">
+                  <p className="text-white text-xs font-medium">Jessa Mae</p>
+                  <p className="text-white/70 text-[10px]">VA Candidate</p>
                 </div>
-
-                {/* Video call UI overlay - bottom controls */}
-                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2">
-                  <div className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center">
-                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center">
-                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" />
-                    </svg>
-                  </div>
-                  <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center">
-                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                    </svg>
-                  </div>
+                <div className="absolute bottom-3 right-3 bg-black/50 backdrop-blur-sm px-3 py-1.5 rounded-lg">
+                  <p className="text-white text-xs font-medium">Victor K.</p>
+                  <p className="text-white/70 text-[10px]">CEO, Treantly</p>
                 </div>
 
                 {/* Call duration */}

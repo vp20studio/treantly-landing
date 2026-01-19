@@ -53,8 +53,8 @@ export default function CalendlySection() {
           <div className="bg-white rounded-2xl overflow-hidden">
             <div
               className="calendly-inline-widget"
-              data-url="https://calendly.com/vp20studio-info/30min?hide_gdpr_banner=1&background_color=fffdf7&text_color=2e4934&primary_color=068466"
-              style={{ minWidth: "280px", height: "700px" }}
+              data-url="https://calendly.com/mponce-treantly"
+              style={{ minWidth: "320px", height: "700px" }}
             ></div>
           </div>
         </div>
