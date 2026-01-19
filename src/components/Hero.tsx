@@ -151,36 +151,21 @@ export default function Hero() {
             </div>
 
             {/* Video Call Card */}
-            <div className="relative glass rounded-3xl p-4 shadow-elevated max-w-lg mx-auto lg:mx-0 overflow-hidden">
+            <div className="relative glass rounded-3xl p-3 sm:p-4 shadow-elevated max-w-lg mx-auto lg:mx-0 overflow-hidden">
               {/* Video call image container */}
-              <div className="relative rounded-2xl aspect-video overflow-hidden">
+              <div className="relative rounded-2xl overflow-hidden">
                 <img
                   src="/hero-video-call.png"
                   alt="Victor from Treantly interviewing a VA candidate"
-                  className="w-full h-full object-cover"
+                  className="w-full h-auto object-contain rounded-2xl"
                 />
-
-                {/* Name labels overlay */}
-                <div className="absolute bottom-3 left-3 bg-black/50 backdrop-blur-sm px-3 py-1.5 rounded-lg">
-                  <p className="text-white text-xs font-medium">Jessa Mae</p>
-                  <p className="text-white/70 text-[10px]">VA Candidate</p>
-                </div>
-                <div className="absolute bottom-3 right-3 bg-black/50 backdrop-blur-sm px-3 py-1.5 rounded-lg">
-                  <p className="text-white text-xs font-medium">Victor K.</p>
-                  <p className="text-white/70 text-[10px]">CEO, Treantly</p>
-                </div>
-
-                {/* Call duration */}
-                <div className="absolute top-3 left-1/2 -translate-x-1/2 bg-black/30 backdrop-blur-sm px-3 py-1 rounded-full">
-                  <p className="text-white text-xs font-medium">23:45</p>
-                </div>
               </div>
 
               {/* Card footer */}
-              <div className="mt-4 flex items-center justify-between">
+              <div className="mt-3 sm:mt-4 flex items-center justify-between">
                 <div>
                   <p className="text-sm font-semibold text-[var(--brand-green)]">Discovery Interview</p>
-                  <p className="text-xs text-[var(--muted)]">Meet your pre-vetted candidates</p>
+                  <p className="text-xs text-[var(--muted)]">Victor K. with Jessa Mae</p>
                 </div>
                 <div className="flex items-center gap-1 bg-[var(--brand-lime)]/30 px-3 py-1.5 rounded-full">
                   <span className="relative flex h-2 w-2">
