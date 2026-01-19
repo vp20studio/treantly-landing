@@ -5,7 +5,6 @@ export default function ValueComparison() {
     { label: "Payroll Taxes", value: "15-30%" },
     { label: "Benefits & Insurance", value: "$500+/mo" },
     { label: "Turnover Risk", value: "High" },
-    { label: "Training Time", value: "2-4 weeks" },
   ];
 
   const treantlyItems = [
@@ -14,7 +13,6 @@ export default function ValueComparison() {
     { label: "Payroll Taxes", value: "0%" },
     { label: "Benefits & Insurance", value: "$0 (We cover it)" },
     { label: "Turnover Risk", value: "Low (Pre-vetted)" },
-    { label: "Training Time", value: "Already trained" },
   ];
 
   return (

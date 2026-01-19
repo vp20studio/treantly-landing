@@ -91,7 +91,7 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Column - Video Call Card */}
+          {/* Right Column - Video Call Card + Features */}
           <div className="relative animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
             {/* Decorative elements */}
             <div className="absolute -top-10 -left-10 w-40 h-40 bg-[var(--brand-lime)] blob opacity-60 animate-float"></div>
@@ -116,79 +116,35 @@ export default function Hero() {
                 </div>
                 <div className="flex items-center gap-1 bg-[var(--brand-lime)]/30 px-3 py-1.5 rounded-full">
                   <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--brand-teal)] opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-[var(--brand-teal)]"></span>
                   </span>
                   <span className="text-xs font-medium text-[var(--brand-green)]">Live</span>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
 
-        {/* Features Bar */}
-        <div className="mt-12 sm:mt-16 lg:mt-20 animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            {[
-              {
-                icon: (
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd" />
-                  </svg>
-                ),
-                title: "Source Any Role",
-                description: "Find talent for any position",
-                gradient: "from-[var(--brand-teal)] to-[#0a9f7d]",
-                iconColor: "text-white",
-              },
-              {
-                icon: (
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                ),
-                title: "Pre-Vetted Talent",
-                description: "We meet every candidate",
-                gradient: "from-[var(--brand-lime)] to-[#d4e87a]",
-                iconColor: "text-[var(--brand-green)]",
-              },
-              {
-                icon: (
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z" />
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clipRule="evenodd" />
-                  </svg>
-                ),
-                title: "Pay Nothing Upfront",
-                description: "Interview candidates first",
-                gradient: "from-[var(--brand-green)] to-[#3d5f45]",
-                iconColor: "text-white",
-              },
-              {
-                icon: (
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                ),
-                title: "1-Week Guarantee",
-                description: "Or your money back",
-                gradient: "from-[var(--brand-orange)] to-[#f0b85a]",
-                iconColor: "text-white",
-              },
-            ].map((feature, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-3 p-4 rounded-2xl bg-white/60 backdrop-blur-sm shadow-soft hover:shadow-md transition-shadow"
-              >
-                <div className={`w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br ${feature.gradient} rounded-xl flex items-center justify-center ${feature.iconColor} shadow-soft flex-shrink-0`}>
-                  {feature.icon}
+            {/* Features Grid - Under the card */}
+            <div className="mt-4 sm:mt-6 grid grid-cols-2 gap-3 max-w-lg mx-auto lg:mx-0">
+              {[
+                { icon: "M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z", title: "Source Any Role" },
+                { icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z", title: "Pre-Vetted Talent" },
+                { icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z", title: "Pay Nothing Upfront" },
+                { icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z", title: "1-Week Guarantee" },
+              ].map((feature, index) => (
+                <div
+                  key={index}
+                  className="flex items-center gap-2.5 p-3 rounded-xl bg-white/70 backdrop-blur-sm"
+                >
+                  <div className="w-8 h-8 bg-[var(--brand-teal)] rounded-lg flex items-center justify-center text-white flex-shrink-0">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={feature.icon} />
+                    </svg>
+                  </div>
+                  <p className="font-medium text-[var(--brand-green)] text-sm">{feature.title}</p>
                 </div>
-                <div className="min-w-0">
-                  <p className="font-semibold text-[var(--brand-green)] text-sm sm:text-base truncate">{feature.title}</p>
-                  <p className="text-xs sm:text-sm text-[var(--muted)] truncate">{feature.description}</p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
