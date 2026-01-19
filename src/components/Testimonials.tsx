@@ -99,7 +99,7 @@ export default function Testimonials() {
               {[1, 2, 3, 4, 5].map((star) => (
                 <svg
                   key={star}
-                  className="w-4 h-4 text-[var(--brand-orange)]"
+                  className="w-4 h-4 text-[var(--brand-teal)]"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -211,7 +211,7 @@ export default function Testimonials() {
                     {[1, 2, 3, 4, 5].map((star) => (
                       <svg
                         key={star}
-                        className="w-4 h-4 text-[var(--brand-orange)]"
+                        className="w-4 h-4 text-[var(--brand-teal)]"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >

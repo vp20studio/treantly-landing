@@ -42,7 +42,7 @@ export default function HowItWorks() {
           />
         </svg>
       ),
-      gradient: "from-[var(--brand-green)] to-[#3d5f45]",
+      gradient: "from-[var(--brand-teal)] to-[#0a9f7d]",
     },
     {
       number: "03",
@@ -64,7 +64,7 @@ export default function HowItWorks() {
           />
         </svg>
       ),
-      gradient: "from-[var(--brand-orange)] to-[#f0b85a]",
+      gradient: "from-[var(--brand-teal)] to-[#0a9f7d]",
     },
   ];
 

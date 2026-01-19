@@ -69,8 +69,6 @@ export default function CalendlySection() {
                 </svg>
               ),
               text: "Source any role for your business",
-              gradient: "from-[var(--brand-teal)] to-[#0a9f7d]",
-              iconColor: "text-white",
             },
             {
               icon: (
@@ -79,8 +77,6 @@ export default function CalendlySection() {
                 </svg>
               ),
               text: "We personally vet and meet candidates for you",
-              gradient: "from-[var(--brand-lime)] to-[#d4e87a]",
-              iconColor: "text-[var(--brand-green)]",
             },
             {
               icon: (
@@ -90,8 +86,6 @@ export default function CalendlySection() {
                 </svg>
               ),
               text: "Interview candidates first. Pay nothing upfront",
-              gradient: "from-[var(--brand-green)] to-[#3d5f45]",
-              iconColor: "text-white",
             },
             {
               icon: (
@@ -100,15 +94,13 @@ export default function CalendlySection() {
                 </svg>
               ),
               text: "One-week guarantee with your hire or your money back",
-              gradient: "from-[var(--brand-orange)] to-[#f0b85a]",
-              iconColor: "text-white",
             },
           ].map((item, index) => (
             <div
               key={index}
               className="flex items-center gap-3 sm:gap-4 p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white/50 backdrop-blur-sm shadow-soft hover-lift"
             >
-              <div className={`w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br ${item.gradient} rounded-lg sm:rounded-xl flex items-center justify-center ${item.iconColor} shadow-soft flex-shrink-0`}>
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[var(--brand-teal)] rounded-lg sm:rounded-xl flex items-center justify-center text-white shadow-soft flex-shrink-0">
                 {item.icon}
               </div>
               <p className="font-medium text-[var(--brand-green)] text-sm sm:text-base">{item.text}</p>
